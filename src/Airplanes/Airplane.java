@@ -58,7 +58,7 @@ public class Airplane {
                 if (currentLoad <= maxLoad) {
                     System.out.println("Cargovliegtuig " + planeIdentification + " laadt " + currentLoad
                             + " ton Cargo.");
-                } else System.out.println("Airplanes.Airplane " + getPlaneIdentification() + " laadt " + maxLoad
+                } else System.out.println("Cargovliegtuig " + getPlaneIdentification() + " laadt " + maxLoad
                         + " ton Cargo. " + notFittingLoads + " ton past niet.");
                 break;
 //              System.out.println("switch 2 OK");
