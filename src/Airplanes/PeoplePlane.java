@@ -9,5 +9,7 @@ public class PeoplePlane extends Airplane {
         super(newPlaneIdentification, newIsFlying, newOrigin, newType, newCurrentLoad, newMaxLoad);
         // Created new constructor that inherits from Airplane, but this super overrides the values.
     }
+
+
 }
 

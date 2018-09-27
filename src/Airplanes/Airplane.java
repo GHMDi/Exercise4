@@ -26,7 +26,7 @@ public abstract class Airplane {
 
     public void takeoffPlane() {
         if (isFlying() == true) {
-            System.out.println("Airplanes.Airplane " + planeIdentification +
+            System.out.println("Airplane " + planeIdentification +
                     " can not take off, because we are still flying.");
         } else if (isFlying() == false)
             System.out.println("Plane " + planeIdentification + " rises.");
@@ -43,27 +43,7 @@ public abstract class Airplane {
         setFlying(false);
     }
 
-    public void loadPlane(int LoadsToLoad) {
-        setCurrentLoad(getCurrentLoad()+LoadsToLoad);
-        int notFittingLoads = (currentLoad - maxLoad);
-        switch (type) {
-            case "Airplanes.PeoplePlane":
-                if (currentLoad <= maxLoad) {
-                    System.out.println("Passagiersvliegtuig " + planeIdentification + " laadt " + currentLoad
-                            + " Passagiers.");
-                } else System.out.println("Passagiersvliegtuig " + getPlaneIdentification() + " laadt " + maxLoad
-                        + " Passagiers. " + notFittingLoads + " passagiers passen niet.");
-                break;
-//              System.out.println("switch 1 OK");
-            case "Airplanes.CargoPlane":
-                if (currentLoad <= maxLoad) {
-                    System.out.println("Cargovliegtuig " + planeIdentification + " laadt " + currentLoad
-                            + " ton Cargo.");
-                } else System.out.println("Cargovliegtuig " + getPlaneIdentification() + " laadt " + maxLoad
-                        + " ton Cargo. " + notFittingLoads + " ton past niet.");
-                break;
-//              System.out.println("switch 2 OK");
-        }
+    public void loadPlane() {
     }
 
     public void unloadPlane(int LoadsToLoad) {
