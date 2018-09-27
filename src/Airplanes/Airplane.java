@@ -1,6 +1,7 @@
 package Airplanes;
 
-public class Airplane {
+public abstract class Airplane {
+    // made airplane abstract as only peopleplane and CargoPlanes are allowed to be created
     private String planeIdentification;
     private boolean isFlying;
     private int cruiseSpeed;

@@ -26,7 +26,6 @@ public class Airport {
                 "Eindhoven", "Airplanes.CargoPlane", 0, 20);
     }
 
-    // Exercise 2.2 --> Available planes for loop die checkt of er nog plek is
 
     public void printPlanes() {
         System.out.println("Passagiersvliegtuigen");
@@ -62,8 +61,7 @@ public class Airport {
         for (int i = 0; i < airplaneFromAirport.length; i++) {
             Airplane airplane = airplaneFromAirport[i];
             airplane.checkAvailable();
-            // Hierbij maak ik een koppeling met de Airplanes.Airplane class -->
-            // variabele met de naam airplane, die je weer verder kunt gebruiken
+            // connected with airplane class, so we can use this in the method
             if (airplane.isFlying() == false) {
                 switch (airplane.getType()) {
                     case "Airplanes.PeoplePlane":
@@ -71,7 +69,7 @@ public class Airport {
                                 "opgevraagd. Is niet aan het vliegen. Heeft nog plek voor " + airplane.getAvailableLoad()
                                 + " passagiers.");
                         setAvailable(true);
-//                            System.out.println("switch 1 OK");
+//                           tested outcome System.out.println("switch 1 OK");
                         airplane.loadPlane(63);
                         System.out.println(toString());
                         break;
@@ -80,7 +78,7 @@ public class Airport {
                                 "opgevraagd. Is niet aan het vliegen. Heeft nog plek voor " + airplane.getAvailableLoad()
                                 + " ton cargo.");
                         setAvailable(true);
-//                            System.out.println("switch 2 OK");
+//                         tested outcome   System.out.println("switch 2 OK");
                         airplane.loadPlane(20);
                         System.out.println(toString());
                         break;
